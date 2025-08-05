@@ -57,3 +57,4 @@ group :development do
 end
 
 gem "tailwindcss-rails", "~> 4.3"
+gem 'devise'
