@@ -1,15 +1,25 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  <div class="text-center py-16">
-    <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl">
-      Welcome to MyApp
-    </h1>
-    <p class="mt-4 text-lg text-gray-500">
-      Peace of mind from prototype to production. Build faster, deploy easier.
-    </p>
-    <div class="mt-6">
-      <a href="#" class="px-6 py-3 bg-indigo-600 text-white text-lg font-semibold rounded-md hover:bg-indigo-500">
-        Get Started
-      </a>
+    <div class="text-center py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900">
+            会議室・レンタルスペースを探すなら StoreReserve
+            </h1>
+            <p class="mt-4 text-lg text-gray-600">
+            全国のスペースを簡単に検索・予約。ビジネスからプライベートまで。
+            </p>
+
+            <!-- 検索フォーム -->
+            <div class="mt-8 flex justify-center">
+            <input type="text" placeholder="エリア・駅名で検索" class="w-full max-w-md px-4 py-3 border border-gray-300 rounded-l-md focus:outline-none focus:ring focus:border-indigo-300">
+            <button class="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-r-md hover:bg-indigo-500">
+                検索
+            </button>
+            </div>
+
+            <!-- CTA -->
+            <div class="mt-6">
+            <%= link_to "スペースを掲載する（オーナー向け）", new_owner_registration_path, class: "mt-4 inline-block px-6 py-3 bg-green-500 text-white text-lg font-semibold rounded hover:bg-green-600" %>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
