@@ -15,6 +15,7 @@
     <link rel="apple-touch-icon" href="/icon.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <%= javascript_importmap_tags %>
   </head>
 
   <body class="bg-gray-50 text-gray-900">
@@ -26,11 +27,15 @@
           <% if owner_signed_in? %>
             <span>ようこそ、<%= current_owner.name %> さん</span>
             <%= link_to "マイページ", "#" %>
-            <%= link_to "ログアウト", destroy_owner_session_path, method: :delete, class: "text-red-500" %>
+            <%= link_to "ログアウト", destroy_owner_session_path,
+                        data: { turbo_method: :delete },
+                        class: "text-red-500" %>
           <% elsif user_signed_in? %>
             <span>ようこそ、<%= current_user.name %> さん</span>
             <%= link_to "マイページ", "#" %>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "text-red-500" %>
+            <%= link_to "ログアウト", destroy_user_session_path,
+                        data: { turbo_method: :delete },
+                        class: "text-red-500" %>
           <% else %>
             <%= link_to "スペースをお持ちの方", "/owner", class: "text-gray-700 hover:underline" %>
             <%= link_to "ログイン", new_user_session_path, class: "text-gray-700 hover:underline" %>

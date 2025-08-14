@@ -13,5 +13,10 @@ Rails.application.routes.draw do
 
   root "boards#index"
 
+  resources :spaces, only: [:index, :show]
+
   get '/owner', to: 'pages#owner'
+  namespace :owners do
+    resources :spaces
+  end
 end
